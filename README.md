@@ -2,88 +2,47 @@
 
 # Krish Kumar
 
-**AI Engineer** · Ahmedabad, Gujarat, India · [`krishkrkashyap`](https://github.com/krishkrkashyap)
+**AI Engineer in Ahmedabad, India.** I ship LLM systems into daily operational use — agent
+architectures, MCP servers, RAG over pgvector — and build the backends they run on.
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-krishkrkashyap.github.io-00ff41?style=for-the-badge&logo=github&logoColor=white)](https://krishkrkashyap.github.io)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-krishkrkashyap-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/krishkrkashyap)
-[![X](https://img.shields.io/badge/X-@krishkrkashyap-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/krishkrkashyap)
-[![Instagram](https://img.shields.io/badge/Instagram-@krishkrkashyap-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/krishkrkashyap)
-[![Email](https://img.shields.io/badge/Email-krishkrkashyap@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:krishkrkashyap@gmail.com)
-
----
-
-I ship LLM systems into daily operational use, not demos.
-
-I design multi-provider agent architectures — tool calling, RAG over pgvector, multilingual
-NLU, scheduled autonomous workflows — and build the backend, data and interface layers they
-depend on. At **Cafe Uppercrust Group** I own internal engineering for a 12-outlet bakery,
-restaurant and catering group, and have delivered **40+ production systems in six months**.
-
-Before that I applied the same stack in fintech at **Junomoneta Finsol**: LLM-driven research
-automation that cut manual analysis time 60%, and ML and statistical pipelines over 5+ years
-of market data.
-
-I'm deliberate about correctness in money, auth and data paths.
+Currently the sole engineer for a 12-outlet restaurant group, where I've put 40+ systems into
+production in six months: POS, ERP, payroll, e-commerce, and a WhatsApp assistant ~500 staff
+use every day.
 
 ---
 
-## What I've built
+### What I'm working on
 
-| | |
-|---|---|
-| **WhatsApp AI Operations Assistant** | Conversational agent used daily by **~500 staff**. An 11-tool agent layer with per-tool argument schemas and admin-only gating, so the model answers from live operational data instead of improvising. RAG over a company knowledge base; NLU across English, Hindi, Hinglish and Gujarati. `FastAPI` `PostgreSQL + pgvector` `Redis` |
-| **Petpooja POS MCP Server** | A Model Context Protocol server exposing a commercial POS platform as schema-validated, AI-callable tools — replacing one-off analysis scripts with a conversational interface over live business data. `Python` `MCP` |
-| **Provider-agnostic LLM layer** | Anthropic, OpenAI, Groq and Gemini behind one interface, with a deterministic keyword fallback, so operations survive a degraded provider or an exhausted quota. |
-| **POS-to-Tally accounting bridge** | Replaced a paid vendor connector for 12 outlets. Balanced Tally XML vouchers per payment mode per day, exact-arithmetic money handling, per-day idempotency, behind 11 test suites. |
-| **k-pos** | Offline-first restaurant POS replacing a paid SaaS till. Integer-paise money with basis-point taxes, price snapshots, transactional order mutations under optimistic concurrency. `TypeScript` `Fastify` `SQLite WAL` `React` |
-| **Margin-leakage forensic audit** | A full year of transaction data through a staged pandas pipeline on Parquet. Quantified recurring leakage and — the finding that mattered — identified material value flowing through controls that did not exist. Shipped with a monitoring spec and a runnable control script. |
-| **Biometric attendance kiosk** | Fingerprint templates never leave the device: on-device 1:N matching, offline punch queueing, server-side geofence authority rather than trusting the client. `Kotlin` `Jetpack Compose` `CameraX` |
+- **A WhatsApp operations agent** used daily by ~500 staff — 11 schema-validated tools, RAG over a company knowledge base, NLU across English, Hindi, Hinglish and Gujarati
+- **An MCP server over a commercial POS** — exposing live business data as AI-callable tools instead of one-off analysis scripts
+- **k-pos** — an offline-first point of sale that replaced a paid SaaS till. Integer-paise money, basis-point taxes, no floats anywhere
 
-<sub>Much of the above is internal company work and not public. The repositories below are what I can share.</sub>
+Most of this is internal company work and lives in private repos, so I write the interesting
+parts up instead:
 
----
+### Writing
 
-## Stack
+- [**Never store money in a float**](https://krishkrkashyap.github.io/blog/money-in-integer-paise.html) — integer paise, basis-point taxes, and the one rounding rule that keeps a bill reconciling with the ledger
+- [**An MCP server over a commercial POS**](https://krishkrkashyap.github.io/blog/mcp-server-over-a-pos.html) — why a tool should return an answer, not a dataset
+- [**A margin audit, and the leak that wasn't in the data**](https://krishkrkashyap.github.io/blog/the-leak-that-was-not-in-the-data.html) — auditing the controls you have will never find the thing you have no control for
 
-**AI / LLM**
-`Anthropic Claude API` `OpenAI` `Gemini` `Groq` `Ollama` · multi-provider routing with fallback ·
-prompt engineering · function/tool calling · structured output · `RAG` `pgvector` `ChromaDB` ·
-**MCP server authoring** · `LangChain` `LangGraph` · `Whisper` · multilingual NLU
+### Public repos
 
-**Backend**
-`Python` `FastAPI` `Django` `Flask` · `Node.js` `Express` `Fastify` `TypeScript` ·
-REST · webhooks · WebSockets · `async SQLAlchemy` `Prisma` `Alembic` · `Redis` `BullMQ` `APScheduler` ·
-JWT / NextAuth / bcrypt · role- and permission-based access control
-
-**Frontend & Mobile**
-`React` `Next.js` `Vite` `Tailwind CSS` `shadcn/ui` `TanStack Query` `Zustand` `Recharts` ·
-`React Native / Expo` · `Kotlin` `Jetpack Compose` `Room` `CameraX`
-
-**Data**
-`Pandas` `NumPy` `SciPy` `Parquet` `scikit-learn` `statsmodels` · ETL and reconciliation ·
-forensic data audit · `Playwright` `Selenium` · `python-docx` `PyMuPDF` `openpyxl`
-
-**Databases & Infra**
-`PostgreSQL` `MongoDB` `SQLite` `MySQL` `Redis` · `Docker` `Linux` `AWS` `Nginx` `GitHub Actions` ·
-`pytest` `Vitest` `Jest` `Playwright`
+- [facial-recognition-attendance-system](https://github.com/krishkrkashyap/facial-recognition-attendance-system) — MediaPipe BlazeFace + OpenCV, confidence-thresholded so unknown faces are rejected rather than misattributed
+- [charting](https://github.com/krishkrkashyap/charting) — candlestick engine with 20+ technical indicators
+- [strategies](https://github.com/krishkrkashyap/strategies) — backtesting with walk-forward validation across multiple market regimes
 
 ---
 
-## Background
-
-- **AI Engineer** — Cafe Uppercrust Group, Ahmedabad · May 2026 – present
-- **Research Analyst (AI & Quantitative Systems)** — Junomoneta Finsol · Jan 2026 – Apr 2026
-- **Associate Research Analyst (Data Engineering)** — Junomoneta Finsol · Jul 2025 – Dec 2025
-- **B.Tech, Computer Science (Data Science)** — Brainware University, 2025
-- NISM Series VIII (Equity & Derivatives) · NSE Academy Certified Financial Markets · Bloomberg Market Concepts
+**Python · TypeScript · FastAPI · Next.js · PostgreSQL + pgvector · Docker**
+Anthropic · OpenAI · Groq · Gemini — behind one provider-agnostic interface with a deterministic fallback.
 
 ---
 
-## Reach me
+[![Krish's GitHub stats](https://github-readme-stats.vercel.app/api?username=krishkrkashyap&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&theme=default)](https://github.com/krishkrkashyap)
 
-- 🌐 **[krishkrkashyap.github.io](https://krishkrkashyap.github.io)** — portfolio and [full résumé](https://krishkrkashyap.github.io/resume.html)
-- 💼 [linkedin.com/in/krishkrkashyap](https://www.linkedin.com/in/krishkrkashyap)
-- 📧 [krishkrkashyap@gmail.com](mailto:krishkrkashyap@gmail.com)
-- 📍 Ahmedabad, Gujarat, India
+---
 
-<sub>Krish Kumar · also known as krishkrkashyap · AI Engineer specialising in applied LLM systems, agent architecture and business automation.</sub>
+🌐 [krishkrkashyap.github.io](https://krishkrkashyap.github.io) · 💼 [LinkedIn](https://www.linkedin.com/in/krishkrkashyap) · 📧 [krishkrkashyap@gmail.com](mailto:krishkrkashyap@gmail.com)
+
+<sub>Krish Kumar (krishkrkashyap) — AI Engineer, Ahmedabad, Gujarat, India.</sub>
