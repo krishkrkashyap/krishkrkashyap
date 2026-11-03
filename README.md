@@ -34,7 +34,7 @@ parts up instead:
 
 ---
 
-**Python · TypeScript · FastAPI · Next.js · PostgreSQL + pgvector · Docker**
+**Python · TypeScript · FastAPI · Next.js · PostgreSQL + pgvector · Docker**<br>
 Anthropic · OpenAI · Groq · Gemini — behind one provider-agnostic interface with a deterministic fallback.
 
 ---
