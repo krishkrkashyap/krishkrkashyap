@@ -39,10 +39,6 @@ Anthropic · OpenAI · Groq · Gemini — behind one provider-agnostic interface
 
 ---
 
-[![Krish's GitHub stats](https://github-readme-stats.vercel.app/api?username=krishkrkashyap&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&theme=default)](https://github.com/krishkrkashyap)
-
----
-
 🌐 [krishkrkashyap.github.io](https://krishkrkashyap.github.io) · 💼 [LinkedIn](https://www.linkedin.com/in/krishkrkashyap) · 📧 [krishkrkashyap@gmail.com](mailto:krishkrkashyap@gmail.com)
 
 <sub>Krish Kumar (krishkrkashyap) — AI Engineer, Ahmedabad, Gujarat, India.</sub>
